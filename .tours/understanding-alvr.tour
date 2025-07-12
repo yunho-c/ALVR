@@ -1,0 +1,67 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "understanding-ALVR",
+  "steps": [
+    {
+      "file": "alvr/server_core/src/c_api.rs",
+      "description": "C-ABI Entrypoint (from the Android OpenXR app)",
+      "line": 226
+    },
+    {
+      "file": "alvr/client_core/src/lib.rs",
+      "description": "Performs client setup",
+      "line": 83
+    },
+    {
+      "file": "alvr/client_core/src/lib.rs",
+      "description": "handles device discovery, connection handshake, ...",
+      "line": 108
+    },
+    {
+      "file": "alvr/client_core/src/connection.rs",
+      "description": "Sets up the main network connection from server",
+      "line": 125
+    },
+    {
+      "file": "alvr/client_openxr/src/lib.rs",
+      "description": "Entrypoint for client-side Android app (designated by `android-activity` crate)",
+      "line": 540
+    },
+    {
+      "file": "alvr/client_openxr/src/lib.rs",
+      "description": "Separate thread for rendering (to avoid blocking the main Android event thread)",
+      "line": 543
+    },
+    {
+      "file": "alvr/client_openxr/src/lib.rs",
+      "description": "Sets up OpenXR session & initializes `ClientCoreContext`",
+      "line": 549
+    },
+    {
+      "file": "alvr/client_core/src/connection.rs",
+      "description": "Waits for a complete video packet to become available",
+      "line": 578
+    },
+    {
+      "file": "alvr/client_core/src/connection.rs",
+      "description": "Client-side video reception thread",
+      "line": 276
+    },
+    {
+      "file": "alvr/client_core/src/connection.rs",
+      "description": "Blocks until a full video packet is available",
+      "line": 281
+    },
+    {
+      "file": "alvr/client_core/src/connection.rs",
+      "description": "Deserializes `VideoPacketHeader` and `nal` (raw video data)",
+      "line": 286
+    },
+    {
+      "file": "alvr/client_core/src/video_decoder/android.rs",
+      "description": "Manages an Android `MediaCodec` instance for hardware-accelerated video decoding. Runs continually in a dedicated background thread. ",
+      "line": 193
+    }
+  ],
+  "ref": "understanding"
+}
